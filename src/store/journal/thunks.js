@@ -8,12 +8,13 @@ export const startNewNote = () => {
         dispatch(savingNewNote())
 
         const {uid } = getState().auth;
+        console.log("uid: ", uid)
         const newNote = {
             title: '',
             body: '',
             date: new Date().getTime()
         }
-        
+        console.log(newNote);
         const newDoc = doc(collection(FirebaseDB, `${uid}/journal/notes`));
         await setDoc(newDoc, newNote);
        

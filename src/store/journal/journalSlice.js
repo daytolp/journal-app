@@ -8,7 +8,7 @@ const setListNot = (state, action) => {
         }
         return note;
     });
-    console.log("notes state: ", state.notes)
+    // console.log("notes state: ", state.notes)
 }
 
 export const journalSlice = createSlice({
